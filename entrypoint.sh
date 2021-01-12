@@ -88,8 +88,6 @@ EOF
 echo "Created new configuration at ${BITCOIN_CONF}"
 fi
 
-chmod 0600 "${BITCOIN_CONF}"
-
 if [ $# -eq 0 ]; then
   exec bitcoind -datadir=${BITCOIN_DIR} -conf=${BITCOIN_CONF}
 else
